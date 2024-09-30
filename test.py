@@ -25,7 +25,6 @@ for exp in n_exp:
         file_name = '{}-{}.txt'.format(exp, meas)
         file_path = os.path.join(directory, file_name)
         measurement = data_validation(file_path, n_peaks=n_peaks)
-        print(measurement.shape)
         uncert_meas = calc_uncer(measurement)
         complete_data.append(uncert_meas)
 
